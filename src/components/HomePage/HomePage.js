@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Button, Container } from 'react-bootstrap'
 
 function HomePage() {
   return (
@@ -11,10 +11,10 @@ function HomePage() {
         <h5 className='big-header text-secondary'>
           Web Developer.
         </h5>
-        <p className='text-secondary' style={{paddingTop: '2em'}}>
-          I am a computer science graduate from the University of Alberta looking 
-          for full-stack and front-end development roles.
+        <p className='text-secondary' style={{paddingTop: '1.5em'}}>
+          Talk to me through the chat icon in the corner!
         </p>
+        <Button variant='outline-primary shadow-sm' style={{marginTop: '1em', width: '100px', height:'60px'}}> Resume</Button>
       </div>
     </Container>
   )

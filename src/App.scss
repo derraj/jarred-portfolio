@@ -8,4 +8,8 @@ html, body, #root, .App {
     height: 100vh;
 }
 
+// make widge float over page
+#cometchat__widget {
+    position: fixed;
+}
 
