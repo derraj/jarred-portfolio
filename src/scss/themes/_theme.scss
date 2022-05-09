@@ -1,0 +1,12 @@
+/* make the customizations */
+$primary: #7669CD;
+$secondary: #5D50B2;
+$light: #FCFCFF;
+$dark: #554C7D;
+
+:export {
+    primary: $primary;
+    seconary: $secondary;
+    light: $light;
+    dark: $dark;
+}

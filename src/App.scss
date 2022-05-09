@@ -1,0 +1,11 @@
+// include customized bootstrap
+@import './scss/_main';
+
+// include all of Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+html, body, #root, .App {
+    height: 100vh;
+}
+
+
