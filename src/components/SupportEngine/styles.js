@@ -1,14 +1,17 @@
+import themes from '../../scss/themes/_theme.scss'
+
 export const styles = {
   chatWithMeButton: {
       cursor: 'pointer',
-      boxShadow: '0px 0px 16px 6px rgba(0, 0, 0, 0.33)',
+      //boxShadow: '0px 0px 16px 3px rgba(0, 0, 0, 0.33)',
       // Border
       borderRadius: '50%',
       // Background 
-      backgroundImage: `url(https://chat-engine-assets.s3.amazonaws.com/tutorials/my-face-min.png)`, 
+      backgroundImage: `url(chat-right-text.svg)`, 
+      backgroundColor: `${themes.primary}`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
-      backgroundSize: '84px',
+      backgroundSize: '50px',
       // Size
       width: '84px',
       height: '84px',
@@ -25,8 +28,8 @@ export const styles = {
       padding: '12px 12px 12px 16px',
       borderRadius: '24px', 
       // Color
-      backgroundColor: '#f9f0ff',
-      color: 'black',
+      backgroundColor: `${themes.primary}`,
+      color: 'white',
   },
   supportWindow: {
       // Position
@@ -41,8 +44,8 @@ export const styles = {
       backgroundColor: 'white',
       // Border
       borderRadius: '12px',
-      border: `2px solid #7a39e0`,
-      overflow: 'hidden',
+      border: `4px solid ${themes.secondary}`,
+      //overflow: 'hidden',
       // Shadow
       boxShadow: '0px 0px 16px 6px rgba(0, 0, 0, 0.33)',
   },
@@ -55,17 +58,19 @@ export const styles = {
   },
   stripe: {
       position: 'relative',
-      top: '-45px',
+      top: '-200px',
+      left: '200px',
       width: '100%',
-      height: '308px',
-      backgroundColor: '#7a39e0',
-      transform: 'skewY(-12deg)',
+      height: '400px',
+      backgroundColor: `${themes.secondary}`,
+      transform: 'skewY(0deg)',
+      borderRadius: '50%',
   },
   topText: { 
       position: 'relative',
       width: '100%', 
       top: '15%', 
-      color: 'white', 
+      color: `${themes.secondary}`, 
       fontSize: '24px', 
       fontWeight: '600',
   },
@@ -73,15 +78,16 @@ export const styles = {
       width: '66%',
       textAlign: 'center',
       outline: 'none',
-      padding: '12px',
+      padding: '10px',
       borderRadius: '12px',
-      border: '2px solid #7a39e0',
+      border:  `2px solid ${themes.secondary}`,
+      color: `${themes.secondary}`, 
   },
   bottomText: { 
       position: 'absolute', 
       width: '100%', 
       top: '60%', 
-      color: '#7a39e0', 
+      color:  `${themes.secondary}`, 
       fontSize: '24px', 
       fontWeight: '600' 
   },
@@ -93,7 +99,7 @@ export const styles = {
       backgroundColor: 'white',
   },
   loadingIcon: { 
-      color: '#7a39e0', 
+      color: `${themes.primary}`, 
       position: 'absolute', 
       top: 'calc(50% - 51px)', 
       left: 'calc(50% - 51px)',  
