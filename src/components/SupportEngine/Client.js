@@ -16,35 +16,21 @@ const Client = () => {
     }).then((response) => {
       console.log("Initialization completed successfully");
       //You can now call login function.
-      let uid = localStorage.getItem("cc-uid");
+      let uid = sessionStorage.getItem("cc-uid");
+      console.log(uid);
       if (uid === null) {
         // create new user
-        const uid = "user" + new Date().getSeconds().toString();
-        const user = new window.CometChatWidget.CometChat.User(uid);
-        user.setName(uid);
-        window.CometChatWidget.createOrUpdateUser(user).then((user) => {
-          // Proceed with user login
-          window.CometChatWidget.login({
-            uid: uid,
-          }).then((loggedInUser) => {
-            localStorage.setItem("cc-uid", loggedInUser.uid);
-            // Proceed with launching your Chat Widget
-            window.CometChatWidget.launch({
-              widgetID: wid,
-              roundedCorners: "true",
-              docked: "true",
-              height: "600px",
-              width: "400px",
-              defaultID: process.env.REACT_APP_AGENT_ID,
-              defaultType: "user", //user or group
-            });
-            setLoad(false);
-          });
-        });
-      } else {
+        uid = "user" + Math.random().toString(16).slice(2);
+      }
+      const user = new window.CometChatWidget.CometChat.User(uid);
+      user.setName(uid);
+      window.CometChatWidget.createOrUpdateUser(user).then((user) => {
+        // Proceed with user login
         window.CometChatWidget.login({
           uid: uid,
-        }).then((user) => {
+        }).then((loggedInUser) => {
+          sessionStorage.setItem("cc-uid", loggedInUser.uid);
+          // Proceed with launching your Chat Widget
           window.CometChatWidget.launch({
             widgetID: wid,
             roundedCorners: "true",
@@ -53,11 +39,11 @@ const Client = () => {
             width: "400px",
             defaultID: process.env.REACT_APP_AGENT_ID,
             defaultType: "user", //user or group
-            target: 'position-fixed'
           });
           setLoad(false);
         });
-      }
+      });
+
     });
   }, []);
   if (load) {

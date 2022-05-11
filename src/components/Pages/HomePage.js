@@ -1,9 +1,9 @@
 import React from 'react'
-import { Button, Container } from 'react-bootstrap'
+import { Button } from 'react-bootstrap'
 
 function HomePage() {
   return (
-    <Container className='container-home'>
+    <div className='container-home'>
       <div style={{paddingTop: '25vh'}}>
         <h5 className='big-header'>
           Jarred Mahinay.
@@ -11,12 +11,14 @@ function HomePage() {
         <h5 className='big-header text-secondary'>
           Web Developer.
         </h5>
-        <p className='text-secondary' style={{paddingTop: '1.5em'}}>
+        <p className='description' >
           Talk to me through the chat icon in the corner!
         </p>
-        <Button variant='outline-primary shadow-sm' style={{marginTop: '1em', width: '100px', height:'60px'}}> Resume</Button>
+        <Button variant='outline-primary shadow-sm' className='resume-btn' href='Jarred_Resume.pdf' download="Jarred_Resume.pdf">
+          <h5 style={{marginTop: '6px'}}>Resume</h5>
+        </Button>
       </div>
-    </Container>
+    </div>
   )
 }
 
