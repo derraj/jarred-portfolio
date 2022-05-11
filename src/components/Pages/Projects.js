@@ -1,52 +1,44 @@
-import React from 'react'
-import { Card, CardGroup } from 'react-bootstrap'
+import React from 'react';
+import clsx from 'clsx';
+import CustomCard from '../Cards/CustomCard';
+import './Projects.scss'
 
+let experience = {
+  experiences: [ // Preferably, sort by newest first
+    {
+      projectImage: "", // Leave Blank for Template Logo
+      projectName: "Reactivities", // project Name
+      links: ["https://reactivities-jarredm.herokuapp.com/"],
+      technologies: " .NET 5, ReactJS, PostgreSQL, MobX, MediatR",
+      roles: [ // Each project can have multiple Roles
+        {
+          description: "Reactivities is a social media application where users can create and share events with other users. It was created by following the Udemy course 'Complete guide to building an app with .Net Core and React' by Neil Cummings.",
+        },
+      ],
+    },
+    {
+      projectImage: "", // Leave Blank for Template Logo
+      projectName: "Student Union Election Portal", // project Name
+      links: ["https://reactivities-jarredm.herokuapp.com/."],
+      roles: [ // Each project can have multiple Roles
+        {
+          description: "A web app built for an undergraduate course which aimed at streamlining the student election process at the University of Alberta.",
+        },
+      ],
+    },
+  ]
+};
+
+// card styles from https://codepen.io/mrsahar/pen/jRjmdL
 function Projects() {
+
   return (
-    <div className='container-projects'>
-      <CardGroup>
-        <Card style={{ height: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px160" />
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural lead-in to
-              additional content. This content is a little bit longer.
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
-        </Card>
-        <Card style={{ height: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px160" />
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This card has supporting text below as a natural lead-in to additional
-              content.{' '}
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
-        </Card>
-        <Card style={{ height: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px160" />
-          <Card.Body>
-            <Card.Title>Card title</Card.Title>
-            <Card.Text>
-              This is a wider card with supporting text below as a natural lead-in to
-              additional content. 
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer>
-            <small className="text-muted">Last updated 3 mins ago</small>
-          </Card.Footer>
-        </Card>
-      </CardGroup>
+    <div className="container-projects">
+      <div className='sub-header'>Projects</div>
+      <CustomCard/>
+
     </div>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

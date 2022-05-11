@@ -1,9 +1,10 @@
 import React from 'react'
-import { Navbar, Nav, Container, Button} from 'react-bootstrap'
+import { Navbar, Nav, Container, Button } from 'react-bootstrap'
+
 
 function NavBar() {
   return (
-    <Navbar bg="light" fixed="top" style={{borderColor: 'red'}}>
+    <Navbar bg="light" fixed="top" style={{ borderColor: 'red' }}>
       <Container fluid>
         <Navbar.Brand href="#home">
           <img
@@ -13,9 +14,10 @@ function NavBar() {
             className="d-inline-block align-top"
             alt="React Bootstrap logo"
           />
-          <h2 className='big-header' style={{display: 'inline', fontSize: '28px'}}>Jarred's Portfolio</h2>
+
+          <h2 className='big-header' style={{ display: 'inline', fontSize: '28px' }}>Jarred's Portfolio</h2>
         </Navbar.Brand>
-        
+
 
         <div className='navbar-container'>
           <Nav.Link href="#about" >Home</Nav.Link>

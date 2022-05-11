@@ -15,3 +15,10 @@ code {
 * {
   font-family: 'Roboto', sans-serif;
 }
+
+:root {
+  --primary: #7669CD;
+  --secondary: #5D50B2;
+  --light: #FCFCFF;
+  --dark: #554C7D;
+}
